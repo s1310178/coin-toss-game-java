@@ -6,6 +6,7 @@ public class CoinTossGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
+        // ユーザーの名前を取得
         System.out.print("Who are you? \n> ");
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
@@ -27,15 +28,13 @@ public class CoinTossGame {
 
         System.out.println("Heads: " + headsCount + ", Tails: " + tailsCount);
 
-<<<<<<< HEAD
+        // 勝敗の表示
         if (headsCount > tailsCount) {
             System.out.println(userName + " won!");
         } else {
             System.out.println(userName + " lost!");
         }
 
-=======
->>>>>>> user_name
         scanner.close();
     }
 }
