@@ -27,12 +27,15 @@ public class CoinTossGame {
 
         System.out.println("Heads: " + headsCount + ", Tails: " + tailsCount);
 
+<<<<<<< HEAD
         if (headsCount > tailsCount) {
             System.out.println(userName + " won!");
         } else {
             System.out.println(userName + " lost!");
         }
 
+=======
+>>>>>>> user_name
         scanner.close();
     }
 }
