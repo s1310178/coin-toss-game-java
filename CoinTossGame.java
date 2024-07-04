@@ -6,7 +6,7 @@ public class CoinTossGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        // ユーザーの名前を取得
+        // ユーザーに名前の入力を求める
         System.out.print("Who are you? \n> ");
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
@@ -14,8 +14,9 @@ public class CoinTossGame {
         int headsCount = 0;
         int tailsCount = 0;
 
+        // コイントスの模擬
         System.out.println("Tossing a coin...");
-        for (int i = 1; i <= 3; i++) {
+        for (int round = 1; round <= 3; round++) {
             boolean isHeads = random.nextBoolean();
             String result = isHeads ? "Heads" : "Tails";
             if (isHeads) {
@@ -23,16 +24,19 @@ public class CoinTossGame {
             } else {
                 tailsCount++;
             }
-            System.out.println("Round " + i + ": " + result);
+            System.out.println("Round " + round + ": " + result);
         }
 
+        // 結果の表示
         System.out.println("Heads: " + headsCount + ", Tails: " + tailsCount);
 
-        // 勝敗の表示
+        // 勝利メッセージの表示
         if (headsCount > tailsCount) {
             System.out.println(userName + " won!");
-        } else {
+        } else if (tailsCount > headsCount) {
             System.out.println(userName + " lost!");
+        } else {
+            System.out.println("It's a tie!");
         }
 
         scanner.close();
